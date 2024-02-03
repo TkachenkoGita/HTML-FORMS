@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script defer src="./assets/js/index.js"></script>
+</head>
+<body>
+    <main >
+        <h2 class="form-head">Contact form</h2>
+        <p>Please fill in your information and we'll be sending your order </p>
+        <form  class="reg-form">
+            <label class="form-label">
+                <span class="label-caption">Your name</span>
+                <input 
+                type="text" 
+                class="form-input"
+                name="first-name"
+                placeholder="first name"
+                minlength="2"
+                maxlength="20"
+                pattern="[A-Z][a-z]{1,19}"
+                required
+                autofocus
+                tabindex="1"
+                />
+                <input 
+                type="text" 
+                class="form-input"
+                name="last-name"
+                placeholder="last name"
+                minlength="2"
+                maxlength="20"
+                pattern="[A-Z][a-z]{1,19}"
+                required
+                autofocus
+                tabindex="2"
+                />
+            </label>
+            
+            <label class="form-label">
+                <span class="label-caption">Your email</span>
+                <input 
+                type="email" 
+                class="form-input"
+                name="user-email"
+                placeholder="your_mail@gmail.com"
+                required
+                autofocus
+                tabindex="3"
+                />
+            </label>    
+            
+            <label class="form-label ">
+                <span class="label-caption">Phone*</span>
+                <input 
+                type="tel" 
+                class="form-input"
+                name="user-tel"
+                pattern="\d{3}"
+                placeholder="000"
+                required
+                autofocus
+                tabindex="4"
+                />
+                <input 
+                type="tel" 
+                class="form-input"
+                name="user-tel"
+                pattern="\d{3}"
+                placeholder="000"
+                required
+                autofocus
+                tabindex="5"
+                />
+                <input 
+                type="tel" 
+                class="form-input"
+                name="user-tel"
+                pattern="\d{4}"
+                placeholder="0000"
+                required
+                autofocus
+                tabindex="6"
+                />
+            </label> 
+          
+            <label class="form-label">
+                <span class="label-caption">Massage subject</span>
+                <select name="order" class="form-input">
+                <optgroup label="Orders">
+                    <option value="order">Other</option>
+                </optgroup>
+                </select>
+            </label>
+            
+            <label  class="form-label">
+                <span class="label-caption">Massage </span>
+                <textarea class="form-input" name="story" rows="5" cols="33">
+                    </textarea>
+            </label>
+            <div class="create-line"></div>
+            
+            <button  type="submit">SUBMIT FORM</button>
+        </form>
+    </main>
+    
+</body>
+</html>
