@@ -1,7 +1,7 @@
 'use strict'
 
 const formINput= document.querySelector('.form-input');
-const inputs= document.querySelector('input');
+const inputs= document.querySelectorAll('input');
 
 
 formINput.oninput= formInputHeandler;
@@ -9,7 +9,7 @@ formINput.oninput= formInputHeandler;
 
 
 function formInputHeandler({target}){
-if(/^[A-Z][a-z]{1,19}$/.test(target.valeu)){
+if(/^[A-Z][a-z]{1,19}$/.test(target.value)){
     target.classList.add('valid');
     target.classList.remove('invalid');
 }else{
@@ -26,11 +26,11 @@ const INPUTS_FORM_EXP= {
 
 inputs.forEach(i => i.addEventListener('input', inputHeandler));
 function inputHeandler(e){
-    if(INPUTS_FORM_EXP[e.target.name].test(e.target.valeu)){
-        target.classList.add('valid');
-        target.classList.remove('invalid');
+    if(INPUTS_FORM_EXP[e.target.name].test(e.target.value)){
+        e.target.classList.add('valid');
+        e.target.classList.remove('invalid');
     }else{
-        target.classList.add('valid');
-        target.classList.remove('invalid');
+        e.target.classList.add('invalid');
+       e.target.classList.remove('valid');
     }
 }
